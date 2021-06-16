@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F8070707</color>
+    <color name="colorPrimaryDark">#F8070707</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="White">#ffffff</color>
+    <color name="Black">#090909</color>
+    <color name="colorPurple">#983CFF</color>
+    <color name="colorPurpleT">#64983cff</color>
+    <color name="colororange">#ffa31a</color>
+    <color name="colorBlueT">#19b5fe</color>
+    <color name="transparent">#00ffffff</color>
+
+    <color name="lightWhite">#f2f5f8</color>
+    <color name="lightgreen">#F2F8F4</color>
+
+
+    <!--      Dashboard Colors      -->
+
+    <!--  Body and background Colors  -->
+    <color name="home_background">#f2f5f8</color>
+    <color name="banner_background">#F1E9CE</color>
+    <color name="banner_background_light">#56F1E9CE</color>
+
+    <!--  Card Colors  -->
+    <color name="card1">#d4cbe5</color>
+    <color name="card2">#7adccf</color>
+    <color name="card3">#f7c59f</color>
+    <color name="card4">#b8d7f5</color>
+    <color name="card5">#FAC4D7</color>
+
+    <color name="cyan">#17C3B2</color>
+    <color name="green">#008000</color>
+    <color name="red">#D82437</color>
+    <color name="dark_red">#FF0000 </color>
+    <color name="dark_grey">#484547</color>
+
+    <color name="app_background_color">#FAFAFA</color>
+    <color name="divider_color">#C7C7CC</color>
+
+    <color name="item_selected_background_color">#C7C7CC</color>
+    <color name="image_placeholder_background_color">#C7C7CC</color>
+
+
+    <color name="colorPrimaryText">#535D6B</color>
+    <color name="colorSecondaryText">#969DA6</color>
+
+    <color name="colorGreen">#29E088</color>
+    <color name="colorYellow">#FFB941</color>
+    <color name="colorRed">#FF5252</color>
+    <color name="colorDarkGreen">#00bfa5</color>
+    <color name="colorTransparent">#43000000</color>
+    <color name="colorBadge">#FF1744</color>
+
+    <color name="grey_10">#ffe6e6e6</color>
+    <color name="grey_90">#ff263238</color>
+    <color name="grey_40">#ff999999</color>
+    <color name="grey_30">#BE999999</color>
+    <color name="lightgray">#bdbdbd</color>
+
+    <!--    shimmer-->
+    <color name="background">#dddddd</color>
+
+    <color name="mygreen">#00ce44</color>
+    <color name="tab_down">#37aaa9</color>
+    <color name="tab">#46dad8</color>
+    <color name="inside_progress">#ff6c4d70</color>
+    <color name="inside_progress2">#35824e</color>
+    <color name="external_progress">#9C27B0</color>
+    <color name="external_progress2">#18eb5e</color>
+    <color name="bottom_velocimeter">#e515171d</color>
+    <color name="internal_velocimeter">#ffb4b4b4</color>
+    <color name="needle">#6200EA</color>
+    <color name="needle2">#18e9eb</color>
+    <color name="digital_number">#ffdcefff</color>
+    <color name="fullblack">#111111</color>
+
+
+
+    <color name="colorloginPrimary">#008577</color>
+    <color name="colorloginPrimaryDark">#00574B</color>
+    <color name="colorloginAccent">#D81B60</color>
+    <color name="colorWhite">#ffffff</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

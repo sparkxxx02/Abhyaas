@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E1D0D0"
+    android:backgroundTint="#0E0D0D">
+
+
+
+    <ImageView
+        android:id="@+id/image_user"
+        android:layout_width="86dp"
+        android:layout_height="66dp"
+        android:src="@drawable/user_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.00" />
+
+    <TextView
+        android:id="@+id/text_prescription"
+        style="@style/Textstyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#CCC7A2"
+        android:fontFamily="@font/boogaloo"
+        android:gravity="center"
+        android:text="Profile Setup"
+        android:textColor="#FAF8F1"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_user"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <TextView
+        android:id="@+id/text_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/baloo"
+        android:text=""
+        android:textAllCaps="true"
+        android:textColor="#FAF8F1"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/image_user"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_describe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#CCC7A2"
+        android:backgroundTint="#FAF8F1"
+        android:fontFamily="@font/baloo"
+        android:text="Add information about yourself. \nNote:-The formal edits will be checked by teachers. "
+        android:textAlignment="center"
+        android:textColor="#101010"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_prescription" />
+
+    <EditText
+        android:id="@+id/editName1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+
+        android:fontFamily="@font/baloo"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        android:textColor="#FAF8F1"
+        android:textColorHint="#ACABAA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.369"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_describe"
+        app:layout_constraintVertical_bias="0.051" />
+
+
+    <EditText
+        android:id="@+id/editPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:fontFamily="@font/baloo"
+        android:hint="Phone No."
+        android:inputType="phone"
+        android:textColor="#FAF8F1"
+        android:textColorHint="#ACABAA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.369"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editName1"
+        app:layout_constraintVertical_bias="0.054" />
+
+
+    <EditText
+        android:id="@+id/editEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:focusable="false"
+        android:fontFamily="@font/baloo"
+        android:hint="Email"
+        android:editable="false"
+        android:clickable="false"
+        android:textColorHint="#ACABAA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.369"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editPhone"
+        app:layout_constraintVertical_bias="0.054" />
+
+
+
+    <EditText
+        android:id="@+id/edit_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:fontFamily="@font/baloo"
+        android:hint="ID"
+        android:focusable="false"
+        android:clickable="false"
+        android:inputType="textPostalAddress"
+        android:textColor="#FAF8F1"
+        android:textColorHint="#ACABAA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.369"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editEmail"
+        app:layout_constraintVertical_bias="0.054" />
+
+    <EditText
+        android:id="@+id/editcpi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:fontFamily="@font/baloo"
+        android:hint="Current CPI"
+        android:inputType="textPersonName"
+        android:textColor="#FAF8F1"
+        android:textColorHint="#ACABAA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.369"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_id"
+        app:layout_constraintVertical_bias="0.054" />
+
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#F6DF88"
+        android:fontFamily="@font/baloo"
+        android:text="Save changes"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editcpi"
+        app:layout_constraintVertical_bias="0."
+
+        />
+
+    <Button
+        android:id="@+id/btn_resume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upload CV/Resume"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:backgroundTint="#F6DF88"
+        android:fontFamily="@font/baloo"
+        app:layout_constraintStart_toStartOf="@+id/editcpi"
+        app:layout_constraintTop_toBottomOf="@+id/editcpi" />
+
+    <TextView
+        android:id="@+id/link_resume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:textColor="@color/colorYellow"
+        android:text="@string/view_uploaded_resume"
+        app:layout_constraintEnd_toEndOf="@+id/btn_resume"
+        app:layout_constraintStart_toStartOf="@+id/btn_resume"
+        app:layout_constraintTop_toBottomOf="@+id/btn_resume" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

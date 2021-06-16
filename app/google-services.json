@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "842161869589",
+    "project_id": "abhyaas-fb545",
+    "storage_bucket": "abhyaas-fb545.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:842161869589:android:60b95558985a10a860cf1c",
+        "android_client_info": {
+          "package_name": "com.placements.abhyaas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "842161869589-o7cbt3qs48dhlhrqmj6gu62t6bc2gmkc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoNhnJYdrrTW7pw5GSFDYp04VKcjwGFPg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "842161869589-o7cbt3qs48dhlhrqmj6gu62t6bc2gmkc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

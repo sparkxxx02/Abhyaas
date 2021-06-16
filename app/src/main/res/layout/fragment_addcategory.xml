@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/black"
+    tools:context=".Home.AddRecordActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A D D   N E W   C A T E G O R Y"
+        android:textColor="@color/colororange"
+        android:textSize="20sp"
+        android:layout_margin="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Address : "
+        android:visibility="invisible"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_margin="20dp"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="100dp"
+        android:visibility="invisible"
+        >
+        <TextView
+            android:id="@+id/txtaddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Not found"
+
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"
+            android:visibility="gone" />
+
+        <ProgressBar
+            android:id="@+id/addressprogress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            />
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/selectimagelayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@color/black"
+                android:padding="10dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+                >
+                <ImageView
+                    android:id="@+id/photoimageview"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/item_image_foreground"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Category photo"
+                    android:textSize="16sp"
+                    android:id="@+id/image_text"
+                    android:textColor="@color/colororange"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    android:textAllCaps="true"
+                    android:layout_marginBottom="10dp"            />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/txtreadingvalue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="READING = 0 DB"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:textAllCaps="true"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <TextView
+                android:id="@+id/text_cmpname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:visibility="visible"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:src="@drawable/ic_baseline_cloud_upload_24"
+                android:text="Category name?"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:tint="@color/white" />
+            <EditText
+                android:id="@+id/add_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:visibility="visible"
+                android:textColorHint="#A6A1A1"
+                android:hint="Enter category name."
+                android:layout_below="@+id/text_cmpname"
+                android:layout_margin="8dp"
+                android:src="@drawable/ic_baseline_cloud_upload_24"
+                android:textColor="@color/white"
+                />
+
+
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabupload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="8dp"
+                android:src="@drawable/ic_baseline_cloud_upload_24"
+                android:tint="@color/white"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+

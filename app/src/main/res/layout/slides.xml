@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center"
+    android:layout_weight="1"
+    android:orientation="vertical">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"/>
+
+    <com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
+        android:id="@+id/dot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="25dp"
+        android:backgroundTint="#7CECEBF3"
+        app:dotsColor="#F80C0C0C"
+        app:dotsSize="12dp"
+        app:dotsSpacing="7dp"
+        app:dotsStrokeColor="#5E0A0A0B"
+        app:progressMode="true"
+        app:selectedDotColor="#9F311B92" />
+
+    <TextView
+        android:id="@+id/car_skip"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="12dp"
+        android:layout_weight="0.1"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/i_understand_skip_to_sign_in_page"
+        android:textAlignment="center"
+        android:textColor="@color/colororange"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+</LinearLayout>
