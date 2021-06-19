@@ -68,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
     private ActionBarDrawerToggle actionBarDrawerToggle;
     static TextView navUsername;
     private FloatingActionButton btn_upload;
+    public static String profile;
 
 
 
@@ -110,10 +111,14 @@ public class MainActivity extends AppCompatActivity {
                                 String category=document.getString("Category");
                                 navUsername.setText(name);
                                 if (category.equals("Student"))
+                                {
                                     navigationView.inflateMenu(R.menu.student_items);
+                                    profile="Student";
+                                }
                                 else
                                 {
                                     navigationView.inflateMenu(R.menu.tpo_items);
+                                    profile="TPO";
                                     upload();
                                 }
 
@@ -188,6 +193,11 @@ public class MainActivity extends AppCompatActivity {
 
                     builder.create().show();
                     selectorFragment=new HomeFragment();
+                }
+                else if(item.getItemId()== R.id.record)
+                {
+                    RecentAppointment_Fragment.init="1";
+                    selectorFragment=new RecentAppointment_Fragment();
                 }
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment, selectorFragment).addToBackStack("Profile Setup").commit();
                 drawerLayout.closeDrawers();

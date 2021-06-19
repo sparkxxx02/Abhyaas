@@ -53,6 +53,7 @@ public class RecentAppointment_Fragment extends Fragment {
     private List<String> locations;
 
     private String dr, patient, clinic, date, photo, time,category;
+    public static String init;
 
     public RecentAppointment_Fragment() {
         // Required empty public constructor
@@ -79,8 +80,18 @@ public class RecentAppointment_Fragment extends Fragment {
         // Inflate the layout for this fragment
         v = inflater.inflate(R.layout.fragment_recent_appointment_, container, false);
         RecyclerView recyclerView = (RecyclerView) v.findViewById(R.id.recycler_recentapp);
-        Query query = FirebaseFirestore.getInstance().collection("users")
-                .document(FirebaseAuth.getInstance().getCurrentUser().getUid()).collection("Applied");
+        Query query;
+        if(init.equals("1"))
+        {
+            query = FirebaseFirestore.getInstance().collection("users")
+                    .document("Appointments").collection("Dataset");
+
+        }
+        else
+        {
+            query = FirebaseFirestore.getInstance().collection("users")
+                    .document(FirebaseAuth.getInstance().getCurrentUser().getUid()).collection("Applied");
+        }
 
         options = new FirestoreRecyclerOptions.Builder<Dataclass_recentapp>()
                 .setQuery(query, Dataclass_recentapp.class)

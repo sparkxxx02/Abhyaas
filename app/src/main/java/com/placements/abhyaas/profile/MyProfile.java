@@ -184,6 +184,12 @@ public class MyProfile extends Fragment {
         storage = FirebaseStorage.getInstance();
         storageReference = storage.getReference();
 
+        if (MainActivity.profile.equals("TPO"))
+        {
+            cpi.setVisibility(View.INVISIBLE);
+            btn_resume.setVisibility(View.INVISIBLE);
+        }
+
     }
     public void selectpdf()
     {

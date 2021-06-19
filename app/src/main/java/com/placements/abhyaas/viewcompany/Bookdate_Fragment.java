@@ -188,6 +188,12 @@ public class Bookdate_Fragment extends Fragment {
     }
     private void checkapplication()
     {
+        if(MainActivity.profile.equals("TPO"))
+        {
+            Button btn=v.findViewById(R.id.btn_apply);
+            btn.setVisibility(View.INVISIBLE);
+        }
+
         FirebaseFirestore.getInstance().collection("users")
                 .document(FirebaseAuth.getInstance().getCurrentUser().getUid()).collection("Applied")
                 .whereEqualTo("Company_name", name)
