@@ -66,9 +66,9 @@ public class MainActivity extends AppCompatActivity {
     private androidx.appcompat.widget.Toolbar toolbar;
     private NavigationView navigationView;
     private ActionBarDrawerToggle actionBarDrawerToggle;
-    static TextView navUsername;
+    static TextView navUsername,navCPI;
     private FloatingActionButton btn_upload;
-    public static String profile;
+    public static String profile,CPI;
 
 
 
@@ -97,6 +97,7 @@ public class MainActivity extends AppCompatActivity {
             NavigationView navigationView = (NavigationView) findViewById(R.id.navigation);
             View headerView = navigationView.getHeaderView(0);
             navUsername = (TextView) headerView.findViewById(R.id.user_name);
+            navCPI=headerView.findViewById(R.id.cpi);
             FirebaseFirestore db = FirebaseFirestore.getInstance();
 
             db.collection("users")
@@ -109,6 +110,7 @@ public class MainActivity extends AppCompatActivity {
                                 DocumentSnapshot document = task.getResult();
                                 String name = (document.getString("Name"));
                                 String category=document.getString("Category");
+                                navCPI.setText(document.getString("CPI"));
                                 navUsername.setText(name);
                                 if (category.equals("Student"))
                                 {
@@ -129,8 +131,45 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public static String getName() {
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+        db.collection("users")
+                .document(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                        if (task.isSuccessful()) {
+                            DocumentSnapshot document = task.getResult();
+                            String name = (document.getString("Name"));
+                            navUsername.setText(name);
+
+                        }
+                    }
+                });
+
         return navUsername.getText().toString();
     }
+    public static String getCPI() {
+
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+        db.collection("users")
+                .document(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                        if (task.isSuccessful()) {
+                            DocumentSnapshot document = task.getResult();
+                            navCPI.setText(document.getString("CPI"));
+
+                        }
+                    }
+                });
+        return navCPI.getText().toString();
+    }
+
 
     private void getDrawer_started() {
 
@@ -198,6 +237,15 @@ public class MainActivity extends AppCompatActivity {
                 {
                     RecentAppointment_Fragment.init="1";
                     selectorFragment=new RecentAppointment_Fragment();
+                }
+                else if(item.getItemId()== R.id.feedback)
+                {
+                    String link="https://docs.google.com/forms/d/e/1FAIpQLScCsF4xJrasRw395Dwwfe3hPiHZl8XG4YJYJwbGK49CseiF4A/viewform?usp=sf_link";
+                    Intent intent = new Intent();
+                    intent.setAction(Intent.ACTION_VIEW);
+                    intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                    intent.setData(Uri.parse(link));
+                    startActivity(intent);
                 }
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment, selectorFragment).addToBackStack("Profile Setup").commit();
                 drawerLayout.closeDrawers();

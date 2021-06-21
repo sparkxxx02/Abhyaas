@@ -74,13 +74,7 @@ public class DoctorsFragment extends Fragment implements AdapterView.OnItemSelec
                 holder.setcpi(model.getcpi());
                 holder.setctc(model.getCTC());
 
-                holder.itemView.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Toast.makeText(getActivity(), "For booking click on Consult now", Toast.LENGTH_SHORT).show();
 
-                    }
-                });
 
                 holder.itemView.findViewById(R.id.button_consult).setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -88,33 +82,6 @@ public class DoctorsFragment extends Fragment implements AdapterView.OnItemSelec
                         getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment,
                                 new Bookdate_Fragment(model)).addToBackStack("Selected Fragment").commit();
 
-                        /*FirebaseFirestore.getInstance().collection("users")
-                                .document("Doctors").collection("Names")
-                                .whereEqualTo("Name", model.getName()).
-                                get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
-                            @Override
-                            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-                                List<DocumentSnapshot> snapshotList= queryDocumentSnapshots.getDocuments();
-                                for(DocumentSnapshot doc:snapshotList)
-                                {
-                                    temp1.setText(doc.getId());
-                                }
-                            }
-                        });
-                        FirebaseFirestore.getInstance().collection("users")
-                                .document("Doctors").collection("Names")
-                                .document(temp1.getText().toString()).collection("The Vitality Visit")
-                                .document("Monday").get()
-                                .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-                                    @Override
-                                    public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                                        if (task.isSuccessful()) {
-                                            DocumentSnapshot document = task.getResult();
-                                            String time = document.getString("Time");
-
-                                        }
-                                    }
-                                });*/
 
                     }
                 });

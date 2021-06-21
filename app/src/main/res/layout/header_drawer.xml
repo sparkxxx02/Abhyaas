@@ -20,5 +20,12 @@
         style="@style/Textstyle"
         android:fontFamily="@font/boogaloo"
         android:text="username" />
+    <TextView
+        android:id="@+id/cpi"
+        style="@style/Textstyle"
+        android:visibility="invisible"
+        android:fontFamily="@font/boogaloo"
+        android:text="" />
+
 
 </LinearLayout>

@@ -21,6 +21,10 @@
         android:title="Contact Us"
         android:icon="@drawable/ic_baseline_contact_us"/>
     <item
+        android:id="@+id/feedback"
+        android:title="Feedback"
+        android:icon="@drawable/ic_baseline_question_answer"/>
+    <item
         android:id="@+id/logout"
         android:title="Logout"
         android:icon="@drawable/ic_baseline_log_out"/>

@@ -53,7 +53,7 @@ public class RecentAppointment_Fragment extends Fragment {
     private List<String> locations;
 
     private String dr, patient, clinic, date, photo, time,category;
-    public static String init;
+    public static String init="0";
 
     public RecentAppointment_Fragment() {
         // Required empty public constructor

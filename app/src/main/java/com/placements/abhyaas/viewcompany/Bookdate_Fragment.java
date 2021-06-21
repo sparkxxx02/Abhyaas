@@ -50,10 +50,10 @@ public class Bookdate_Fragment extends Fragment {
     String name, cpi, job, photo, ctc, work,skills,category;
     View v;
     private TextView skills_txt,ctc_txt,cpi_txt,job_txt,work_txt, Name;
+    private Button btn;
     RecyclerView dataList;
     static List<String> array_title = new ArrayList<>();
     ImageView Photo;
-    String[] days = new String[]{"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
     AlertDialog alertDialog;
     AlertDialog.Builder dialogBuilder;
     private static final String TAG = "Bookdate_Fragment";
@@ -84,6 +84,7 @@ public class Bookdate_Fragment extends Fragment {
         // Inflate the layout for this fragment
         v = inflater.inflate(R.layout.fragment_bookdate_, container, false);
         //setTime(v);
+        btn=v.findViewById(R.id.btn_apply);
         Name = v.findViewById(R.id.company_name);
         Name.setText(name);
         Photo = v.findViewById(R.id.company_photo);
@@ -102,13 +103,12 @@ public class Bookdate_Fragment extends Fragment {
         checkapplication();
 
 
-        v.findViewById(R.id.btn_apply).setOnClickListener(new View.OnClickListener() {
+        btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //TODO
                 set_application();
                 popupwindow();
-                setUI();
+                setUI(1);
 
 
 
@@ -188,10 +188,18 @@ public class Bookdate_Fragment extends Fragment {
     }
     private void checkapplication()
     {
-        if(MainActivity.profile.equals("TPO"))
+
+
+        if(!MainActivity.profile.equals("Student"))
         {
-            Button btn=v.findViewById(R.id.btn_apply);
             btn.setVisibility(View.INVISIBLE);
+        }
+        else {
+            if(Integer.parseInt(cpi) >= Integer.parseInt(MainActivity.getCPI()))
+            {
+                btn.setVisibility(View.INVISIBLE);
+                Toast.makeText(getActivity(),"Not Eligble",Toast.LENGTH_SHORT).show();
+            }
         }
 
         FirebaseFirestore.getInstance().collection("users")
@@ -204,17 +212,21 @@ public class Bookdate_Fragment extends Fragment {
                 List<DocumentSnapshot> snapshotList = queryDocumentSnapshots.getDocuments();
                 if(!snapshotList.isEmpty())
                 {
-                    setUI();
+                    setUI(1);
                 }
             }
         });
     }
-    public void setUI()
+    public void setUI(int i)
     {
-        Button btn=v.findViewById(R.id.btn_apply);
         btn.setClickable(false);
         btn.setBackgroundColor(Color.GRAY);
-        btn.setText("Already Applied");
+
+        if(i ==1)
+            btn.setText("Already Applied");
+        else
+            btn.setText("Not Eligible");
+
     }
 
 
