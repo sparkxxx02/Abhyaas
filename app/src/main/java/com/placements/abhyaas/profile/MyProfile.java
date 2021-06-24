@@ -79,7 +79,6 @@ public class MyProfile extends Fragment {
         getPreviousUser();
 
         Button save = V.findViewById(R.id.buttonSave);
-        btn_resume=V.findViewById(R.id.btn_resume);
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -183,11 +182,14 @@ public class MyProfile extends Fragment {
         progress = CShowProgress.getInstance();
         storage = FirebaseStorage.getInstance();
         storageReference = storage.getReference();
+        btn_resume=V.findViewById(R.id.btn_resume);
+
 
         if (MainActivity.profile.equals("TPO"))
         {
             cpi.setVisibility(View.INVISIBLE);
             btn_resume.setVisibility(View.INVISIBLE);
+            address.setVisibility(View.INVISIBLE);
         }
 
     }
